@@ -37,9 +37,14 @@ jobs:
         uses: snyk/actions/maven@master
         env:
           SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
-        
-      - name: send telegram message on push
-      - uses: appleboy/telegram-action@master
+
+    send-telegram-notification:
+      needs: unit-test    
+      name: telegram message
+      runs-on: ubuntu-latest
+      steps:
+      - name: Send push notification to telegram bot
+        uses: appleboy/telegram-action@master
         with:
           to: ${{ secrets.TELEGRAM_TO }}
           token: ${{ secrets.TELEGRAM_TOKEN }}
