@@ -12,6 +12,7 @@
 3. .\mvnw.cmd clean package
 
 4. mvnw spring-boot:run
+4. .\mvnw.cd spring-boot:run
 
 5. mvnw clean package spring-boot:run
 
