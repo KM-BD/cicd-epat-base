@@ -3,10 +3,13 @@
 ## Maven Command
 
 1. mvnw
+1. .\mvnw.cmd
 
 2. mvnw compile
+2. .\mvnw.cmd compile
 
 3. mvnw clean package
+3. .\mvnw.cmd clean package
 
 4. mvnw spring-boot:run
 
